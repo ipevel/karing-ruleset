@@ -1,0 +1,314 @@
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: warning
+external-controller: 127.0.0.1:9090
+clash-for-android:
+  append-system-dns: false
+unified-delay: true
+global-client-fingerprint: chrome
+keep-alive-interval: 360
+proxies: ~
+
+# --- 1. 远程规则集定义 (Rule Providers) ---
+rule-providers:
+  # === 广告拦截 ===
+  reject:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/BanAD.txt"
+    path: ./ruleset/reject.yaml
+    interval: 86400
+
+  adcompany:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/BanADCompany.txt"
+    path: ./ruleset/adcompany.yaml
+    interval: 86400
+
+  # === Apple ===
+  apple:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+
+  # === Google ===
+  google:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Google.txt"
+    path: ./ruleset/google.yaml
+    interval: 86400
+
+  googleplay:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/GooglePlay.txt"
+    path: ./ruleset/googleplay.yaml
+    interval: 86400
+
+  googlefcm:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/GoogleFCM.txt"
+    path: ./ruleset/googlefcm.yaml
+    interval: 86400
+
+  googlegemini:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/GoogleGemini.txt"
+    path: ./ruleset/googlegemini.yaml
+    interval: 86400
+
+  # === 流媒体 & 社交 ===
+  proxy-media:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ProxyMedia.txt"
+    path: ./ruleset/proxy-media.yaml
+    interval: 86400
+
+  tiktok:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/TikTok.txt"
+    path: ./ruleset/tiktok.yaml
+    interval: 86400
+
+  instagram:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Instagram.txt"
+    path: ./ruleset/instagram.yaml
+    interval: 86400
+
+  netflix:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Netflix.txt"
+    path: ./ruleset/netflix.yaml
+    interval: 86400
+
+  # === AI & Dev ===
+  openai:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/OpenAI.txt"
+    path: ./ruleset/openai.yaml
+    interval: 86400
+
+  github:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/GitHub.txt"
+    path: ./ruleset/github.yaml
+    interval: 86400
+
+  claude:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Claude.txt"
+    path: ./ruleset/claude.yaml
+    interval: 86400
+
+  # === Microsoft ===
+  bing:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Bing.txt"
+    path: ./ruleset/bing.yaml
+    interval: 86400
+
+  onedrive:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/OneDrive.txt"
+    path: ./ruleset/onedrive.yaml
+    interval: 86400
+
+  microsoft:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Microsoft.txt"
+    path: ./ruleset/microsoft.yaml
+    interval: 86400
+
+  # === Gaming ===
+  gaming:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Xbox.txt"
+    path: ./ruleset/gaming.yaml
+    interval: 86400
+
+  # === 中国直连 ===
+  china-media:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ChinaMedia.txt"
+    path: ./ruleset/china-media.yaml
+    interval: 86400
+
+  neteasemusic:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/NetEaseMusic.txt"
+    path: ./ruleset/neteasemusic.yaml
+    interval: 86400
+
+  china-domain:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ChinaDomain.txt"
+    path: ./ruleset/china-domain.yaml
+    interval: 86400
+
+  # === 代理规则 ===
+  gfwlist:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ProxyGFWlist.txt"
+    path: ./ruleset/gfwlist.yaml
+    interval: 86400
+
+  # === Telegram ===
+  telegram:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Telegram.txt"
+    path: ./ruleset/telegram.yaml
+    interval: 86400
+
+  telegramcidr:
+    type: http
+    behavior: ipcidr
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Telegram.txt"
+    path: ./ruleset/telegramcidr.yaml
+    interval: 86400
+
+# --- 2. 策略组配置 ---
+proxy-groups:
+  - name: 🚀 节点选择
+    type: select
+    proxies:
+      - ♻️ 自动选择
+      - 🔯 故障转移
+
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies: []
+
+  - name: 🔯 故障转移
+    type: fallback
+    url: http://www.gstatic.com/generate_204
+    interval: 180
+    proxies: []
+
+  - name: 📲 电报消息
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 📹 油管视频
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - ♻️ 自动选择
+
+  - name: 🎥 奈飞视频
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+      - ♻️ 自动选择
+
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: 💬 Ai平台
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - ♻️ 自动选择
+      - 🔯 故障转移
+
+
+# --- 3. 规则 (Rules) ---
+rules:
+  # === 本地网络直连 ===
+  - DOMAIN-SUFFIX,local,DIRECT
+  - DOMAIN-SUFFIX,localhost,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+
+  # === 广告拦截 ===
+  - RULE-SET,reject,🛑 全球拦截
+  - RULE-SET,adcompany,🛑 全球拦截
+
+  # === Apple ===
+  - RULE-SET,apple,🚀 节点选择
+
+  # === Google ===
+  - RULE-SET,google,💬 Ai平台
+  - RULE-SET,googleplay,💬 Ai平台
+  - RULE-SET,googlefcm,🚀 节点选择
+  - RULE-SET,googlegemini,💬 Ai平台
+
+  # === 流媒体 & 社交 ===
+  - RULE-SET,proxy-media,📹 油管视频
+  - RULE-SET,tiktok,📹 油管视频
+  - RULE-SET,instagram,📹 油管视频
+  - RULE-SET,netflix,🎥 奈飞视频
+
+  # === AI & Dev ===
+  - RULE-SET,openai,💬 Ai平台
+  - RULE-SET,github,🐟 漏网之鱼
+  - RULE-SET,claude,💬 Ai平台
+
+  # === Microsoft ===
+  - RULE-SET,bing,🚀 节点选择
+  - RULE-SET,onedrive,🚀 节点选择
+  - RULE-SET,microsoft,🚀 节点选择
+
+  # === Gaming ===
+  - RULE-SET,gaming,🚀 节点选择
+
+  # === 中国直连 ===
+  - RULE-SET,china-media,🎯 全球直连
+  - RULE-SET,neteasemusic,🎯 全球直连
+  - RULE-SET,china-domain,🎯 全球直连
+  - DOMAIN-SUFFIX,cn,🎯 全球直连
+  - GEOIP,CN,🎯 全球直连
+
+  # === Telegram ===
+  - RULE-SET,telegram,📲 电报消息
+  - RULE-SET,telegramcidr,📲 电报消息,no-resolve
+
+  # === 代理规则 ===
+  - RULE-SET,gfwlist,🚀 节点选择
+
+  # === 兜底 ===
+  - MATCH,🐟 漏网之鱼
