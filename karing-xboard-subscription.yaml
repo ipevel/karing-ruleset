@@ -27,14 +27,6 @@ rule-providers:
     path: ./ruleset/adcompany.yaml
     interval: 86400
 
-  # === Apple ===
-  apple:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Apple.txt"
-    path: ./ruleset/apple.yaml
-    interval: 86400
-
   # === Google ===
   google:
     type: http
@@ -64,6 +56,14 @@ rule-providers:
     path: ./ruleset/googlegemini.yaml
     interval: 86400
 
+  # === Apple ===
+  apple:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+
   # === 流媒体 & 社交 ===
   proxy-media:
     type: http
@@ -91,6 +91,13 @@ rule-providers:
     behavior: domain
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Netflix.txt"
     path: ./ruleset/netflix.yaml
+    interval: 86400
+
+  bilibili:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ChinaMedia.txt"
+    path: ./ruleset/bilibili.yaml
     interval: 86400
 
   # === AI & Dev ===
@@ -146,13 +153,6 @@ rule-providers:
     interval: 86400
 
   # === 中国直连 ===
-  china-media:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ChinaMedia.txt"
-    path: ./ruleset/china-media.yaml
-    interval: 86400
-
   neteasemusic:
     type: http
     behavior: domain
@@ -160,19 +160,11 @@ rule-providers:
     path: ./ruleset/neteasemusic.yaml
     interval: 86400
 
-  china-domain:
+  chinadomain:
     type: http
     behavior: domain
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ChinaDomain.txt"
-    path: ./ruleset/china-domain.yaml
-    interval: 86400
-
-  # === 代理规则 ===
-  gfwlist:
-    type: http
-    behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ProxyGFWlist.txt"
-    path: ./ruleset/gfwlist.yaml
+    path: ./ruleset/chinadomain.yaml
     interval: 86400
 
   # === Telegram ===
@@ -190,26 +182,45 @@ rule-providers:
     path: ./ruleset/telegramcidr.yaml
     interval: 86400
 
+  # === 代理规则 ===
+  gfwlist:
+    type: http
+    behavior: domain
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ProxyGFWlist.txt"
+    path: ./ruleset/gfwlist.yaml
+    interval: 86400
+
 # --- 2. 策略组配置 ---
 proxy-groups:
   - name: 🚀 节点选择
     type: select
     proxies:
-      - ♻️ 自动选择
       - 🔯 故障转移
-
-  - name: ♻️ 自动选择
-    type: url-test
-    url: http://www.gstatic.com/generate_204
-    interval: 300
-    tolerance: 50
-    proxies: []
 
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies: []
+
+  - name: 🎯 全球直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🚀 节点选择
+
+  - name: 🛑 全球拦截
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: 🐟 漏网之鱼
+    type: select
+    proxies:
+      - 🚀 节点选择
+      - 🎯 全球直连
+      - 🔯 故障转移
 
   - name: 📲 电报消息
     type: select
@@ -220,38 +231,102 @@ proxy-groups:
     type: select
     proxies:
       - 🚀 节点选择
-      - ♻️ 自动选择
 
   - name: 🎥 奈飞视频
     type: select
     proxies:
       - 🚀 节点选择
 
-  - name: 🎯 全球直连
+  - name: 🏷️ TikTok
     type: select
     proxies:
-      - DIRECT
       - 🚀 节点选择
-      - ♻️ 自动选择
 
-  - name: 🛑 全球拦截
+  - name: 📸 Instagram
     type: select
     proxies:
-      - REJECT
-      - DIRECT
+      - 🚀 节点选择
 
   - name: 💬 Ai平台
     type: select
     proxies:
       - 🚀 节点选择
 
-  - name: 🐟 漏网之鱼
+  - name: 🔍 Google
     type: select
     proxies:
       - 🚀 节点选择
+
+  - name: ▶️ Google Play
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 🔔 Google FCM
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: ✨ Google Gemini
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 🍎 苹果服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 🧑‍💻 GitHub
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 🤖 OpenAI
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 🎭 Claude
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 🔎 微软 Bing
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: ☁️ 微软云盘
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 🖥️ 微软服务
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 🎮 游戏平台
+    type: select
+    proxies:
+      - 🚀 节点选择
+
+  - name: 📺 哔哩哔哩
+    type: select
+    proxies:
       - 🎯 全球直连
-      - ♻️ 自动选择
-      - 🔯 故障转移
+
+  - name: 🎵 网易音乐
+    type: select
+    proxies:
+      - 🎯 全球直连
+
+  - name: 🇨🇳 国内直连
+    type: select
+    proxies:
+      - DIRECT
+      - 🎯 全球直连
 
 
 # --- 3. 规则 (Rules) ---
@@ -268,40 +343,40 @@ rules:
   - RULE-SET,reject,🛑 全球拦截
   - RULE-SET,adcompany,🛑 全球拦截
 
-  # === Apple ===
-  - RULE-SET,apple,🚀 节点选择
-
   # === Google ===
-  - RULE-SET,google,💬 Ai平台
-  - RULE-SET,googleplay,💬 Ai平台
-  - RULE-SET,googlefcm,🚀 节点选择
-  - RULE-SET,googlegemini,💬 Ai平台
+  - RULE-SET,google,🔍 Google
+  - RULE-SET,googleplay,▶️ Google Play
+  - RULE-SET,googlefcm,🔔 Google FCM
+  - RULE-SET,googlegemini,✨ Google Gemini
+
+  # === Apple ===
+  - RULE-SET,apple,🍎 苹果服务
 
   # === 流媒体 & 社交 ===
   - RULE-SET,proxy-media,📹 油管视频
-  - RULE-SET,tiktok,📹 油管视频
-  - RULE-SET,instagram,📹 油管视频
+  - RULE-SET,tiktok,🏷️ TikTok
+  - RULE-SET,instagram,📸 Instagram
   - RULE-SET,netflix,🎥 奈飞视频
+  - RULE-SET,bilibili,📺 哔哩哔哩
 
   # === AI & Dev ===
-  - RULE-SET,openai,💬 Ai平台
-  - RULE-SET,github,🐟 漏网之鱼
-  - RULE-SET,claude,💬 Ai平台
+  - RULE-SET,openai,🤖 OpenAI
+  - RULE-SET,github,🧑‍💻 GitHub
+  - RULE-SET,claude,🎭 Claude
 
   # === Microsoft ===
-  - RULE-SET,bing,🚀 节点选择
-  - RULE-SET,onedrive,🚀 节点选择
-  - RULE-SET,microsoft,🚀 节点选择
+  - RULE-SET,bing,🔎 微软 Bing
+  - RULE-SET,onedrive,☁️ 微软云盘
+  - RULE-SET,microsoft,🖥️ 微软服务
 
   # === Gaming ===
-  - RULE-SET,gaming,🚀 节点选择
+  - RULE-SET,gaming,🎮 游戏平台
 
   # === 中国直连 ===
-  - RULE-SET,china-media,🎯 全球直连
-  - RULE-SET,neteasemusic,🎯 全球直连
-  - RULE-SET,china-domain,🎯 全球直连
-  - DOMAIN-SUFFIX,cn,🎯 全球直连
-  - GEOIP,CN,🎯 全球直连
+  - RULE-SET,neteasemusic,🎵 网易音乐
+  - RULE-SET,chinadomain,🇨🇳 国内直连
+  - DOMAIN-SUFFIX,cn,🇨🇳 国内直连
+  - GEOIP,CN,🇨🇳 国内直连
 
   # === Telegram ===
   - RULE-SET,telegram,📲 电报消息
