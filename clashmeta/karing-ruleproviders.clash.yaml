@@ -21,14 +21,14 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/BanAD.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/BanAD.txt"
     path: ./providers/reject.txt
     interval: 86400
 
   adcompany:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/BanADCompany.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/BanADCompany.txt"
     path: ./providers/adcompany.txt
     interval: 86400
 
@@ -36,28 +36,28 @@ rule-providers:
   google:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Google.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Google.txt"
     path: ./providers/google.txt
     interval: 86400
 
   googleplay:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/GooglePlay.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GooglePlay.txt"
     path: ./providers/googleplay.txt
     interval: 86400
 
   googlefcm:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/GoogleFCM.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GoogleFCM.txt"
     path: ./providers/googlefcm.txt
     interval: 86400
 
   googlegemini:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/GoogleGemini.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GoogleGemini.txt"
     path: ./providers/googlegemini.txt
     interval: 86400
 
@@ -65,28 +65,28 @@ rule-providers:
   proxy-media:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ProxyMedia.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ProxyMedia.txt"
     path: ./providers/proxy-media.txt
     interval: 86400
 
   tiktok:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/TikTok.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/TikTok.txt"
     path: ./providers/tiktok.txt
     interval: 86400
 
   instagram:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Instagram.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Instagram.txt"
     path: ./providers/instagram.txt
     interval: 86400
 
   netflix:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Netflix.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Netflix.txt"
     path: ./providers/netflix.txt
     interval: 86400
 
@@ -94,21 +94,21 @@ rule-providers:
   openai:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/OpenAI.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/OpenAI.txt"
     path: ./providers/openai.txt
     interval: 86400
 
   github:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/GitHub.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GitHub.txt"
     path: ./providers/github.txt
     interval: 86400
 
   claude:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Claude.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Claude.txt"
     path: ./providers/claude.txt
     interval: 86400
 
@@ -116,21 +116,21 @@ rule-providers:
   bing:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Bing.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Bing.txt"
     path: ./providers/bing.txt
     interval: 86400
 
   onedrive:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/OneDrive.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/OneDrive.txt"
     path: ./providers/onedrive.txt
     interval: 86400
 
   microsoft:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Microsoft.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Microsoft.txt"
     path: ./providers/microsoft.txt
     interval: 86400
 
@@ -138,7 +138,7 @@ rule-providers:
   apple:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Apple.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Apple.txt"
     path: ./providers/apple.txt
     interval: 86400
 
@@ -146,7 +146,7 @@ rule-providers:
   gaming:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Xbox.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Xbox.txt"
     path: ./providers/gaming.txt
     interval: 86400
 
@@ -154,21 +154,21 @@ rule-providers:
   china-media:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ChinaMedia.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ChinaMedia.txt"
     path: ./providers/china-media.txt
     interval: 86400
 
   neteasemusic:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/NetEaseMusic.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/NetEaseMusic.txt"
     path: ./providers/neteasemusic.txt
     interval: 86400
 
   china-domain:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ChinaDomain.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ChinaDomain.txt"
     path: ./providers/china-domain.txt
     interval: 86400
 
@@ -176,7 +176,7 @@ rule-providers:
   gfwlist:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/ProxyGFWlist.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ProxyGFWlist.txt"
     path: ./providers/gfwlist.txt
     interval: 86400
 
@@ -184,14 +184,14 @@ rule-providers:
   telegram:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Telegram.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Telegram.txt"
     path: ./providers/telegram.txt
     interval: 86400
 
   telegramcidr:
     type: http
     behavior: ipcidr
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/providers/Telegram.txt"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Telegram.txt"
     path: ./providers/telegramcidr.txt
     interval: 86400
 
