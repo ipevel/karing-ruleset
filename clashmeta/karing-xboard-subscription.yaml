@@ -16,6 +16,7 @@ rule-providers:
   reject:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/BanAD.txt"
     path: ./ruleset/reject.txt
     interval: 86400
@@ -23,6 +24,7 @@ rule-providers:
   adcompany:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/BanADCompany.txt"
     path: ./ruleset/adcompany.txt
     interval: 86400
@@ -31,6 +33,7 @@ rule-providers:
   google:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Google.txt"
     path: ./ruleset/google.txt
     interval: 86400
@@ -38,6 +41,7 @@ rule-providers:
   googleplay:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GooglePlay.txt"
     path: ./ruleset/googleplay.txt
     interval: 86400
@@ -45,6 +49,7 @@ rule-providers:
   googlefcm:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GoogleFCM.txt"
     path: ./ruleset/googlefcm.txt
     interval: 86400
@@ -52,6 +57,7 @@ rule-providers:
   googlegemini:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GoogleGemini.txt"
     path: ./ruleset/googlegemini.txt
     interval: 86400
@@ -60,6 +66,7 @@ rule-providers:
   apple:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Apple.txt"
     path: ./ruleset/apple.txt
     interval: 86400
@@ -68,6 +75,7 @@ rule-providers:
   proxy-media:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ProxyMedia.txt"
     path: ./ruleset/proxy-media.txt
     interval: 86400
@@ -75,6 +83,7 @@ rule-providers:
   tiktok:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/TikTok.txt"
     path: ./ruleset/tiktok.txt
     interval: 86400
@@ -82,6 +91,7 @@ rule-providers:
   instagram:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Instagram.txt"
     path: ./ruleset/instagram.txt
     interval: 86400
@@ -89,6 +99,7 @@ rule-providers:
   netflix:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Netflix.txt"
     path: ./ruleset/netflix.txt
     interval: 86400
@@ -96,6 +107,7 @@ rule-providers:
   bilibili:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ChinaMedia.txt"
     path: ./ruleset/bilibili.txt
     interval: 86400
@@ -104,6 +116,7 @@ rule-providers:
   openai:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/OpenAI.txt"
     path: ./ruleset/openai.txt
     interval: 86400
@@ -111,6 +124,7 @@ rule-providers:
   github:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GitHub.txt"
     path: ./ruleset/github.txt
     interval: 86400
@@ -118,6 +132,7 @@ rule-providers:
   claude:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Claude.txt"
     path: ./ruleset/claude.txt
     interval: 86400
@@ -126,6 +141,7 @@ rule-providers:
   bing:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Bing.txt"
     path: ./ruleset/bing.txt
     interval: 86400
@@ -133,6 +149,7 @@ rule-providers:
   onedrive:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/OneDrive.txt"
     path: ./ruleset/onedrive.txt
     interval: 86400
@@ -140,6 +157,7 @@ rule-providers:
   microsoft:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Microsoft.txt"
     path: ./ruleset/microsoft.txt
     interval: 86400
@@ -148,6 +166,7 @@ rule-providers:
   gaming:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Xbox.txt"
     path: ./ruleset/gaming.txt
     interval: 86400
@@ -156,6 +175,7 @@ rule-providers:
   neteasemusic:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/NetEaseMusic.txt"
     path: ./ruleset/neteasemusic.txt
     interval: 86400
@@ -163,6 +183,7 @@ rule-providers:
   chinadomain:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ChinaDomain.txt"
     path: ./ruleset/chinadomain.txt
     interval: 86400
@@ -171,6 +192,7 @@ rule-providers:
   telegram:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Telegram.txt"
     path: ./ruleset/telegram.txt
     interval: 86400
@@ -178,6 +200,7 @@ rule-providers:
   telegramcidr:
     type: http
     behavior: ipcidr
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Telegram.txt"
     path: ./ruleset/telegramcidr.txt
     interval: 86400
@@ -186,6 +209,7 @@ rule-providers:
   gfwlist:
     type: http
     behavior: domain
+    format: txt
     url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ProxyGFWlist.txt"
     path: ./ruleset/gfwlist.txt
     interval: 86400
