@@ -16,14 +16,14 @@ rule-providers:
   reject:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/BanAD.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/BanAD.yaml"
     path: ./ruleset/reject.yaml
     interval: 86400
 
   adcompany:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/BanADCompany.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/BanADCompany.yaml"
     path: ./ruleset/adcompany.yaml
     interval: 86400
 
@@ -31,21 +31,21 @@ rule-providers:
   openai:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/OpenAI.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/OpenAI.yaml"
     path: ./ruleset/openai.yaml
     interval: 86400
 
   claude:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Claude.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/Claude.yaml"
     path: ./ruleset/claude.yaml
     interval: 86400
 
   googlegemini:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GoogleGemini.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/GoogleGemini.yaml"
     path: ./ruleset/googlegemini.yaml
     interval: 86400
 
@@ -53,28 +53,28 @@ rule-providers:
   proxy-media:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ProxyMedia.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/ProxyMedia.yaml"
     path: ./ruleset/proxy-media.yaml
     interval: 86400
 
   tiktok:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/TikTok.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/TikTok.yaml"
     path: ./ruleset/tiktok.yaml
     interval: 86400
 
   instagram:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Instagram.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/Instagram.yaml"
     path: ./ruleset/instagram.yaml
     interval: 86400
 
   netflix:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Netflix.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/Netflix.yaml"
     path: ./ruleset/netflix.yaml
     interval: 86400
 
@@ -82,21 +82,21 @@ rule-providers:
   google:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Google.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/Google.yaml"
     path: ./ruleset/google.yaml
     interval: 86400
 
   googleplay:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GooglePlay.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/GooglePlay.yaml"
     path: ./ruleset/googleplay.yaml
     interval: 86400
 
   googlefcm:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GoogleFCM.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/GoogleFCM.yaml"
     path: ./ruleset/googlefcm.yaml
     interval: 86400
 
@@ -104,7 +104,7 @@ rule-providers:
   apple:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Apple.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/Apple.yaml"
     path: ./ruleset/apple.yaml
     interval: 86400
 
@@ -112,7 +112,7 @@ rule-providers:
   github:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/GitHub.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/GitHub.yaml"
     path: ./ruleset/github.yaml
     interval: 86400
 
@@ -120,21 +120,21 @@ rule-providers:
   bing:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Bing.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/Bing.yaml"
     path: ./ruleset/bing.yaml
     interval: 86400
 
   onedrive:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/OneDrive.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/OneDrive.yaml"
     path: ./ruleset/onedrive.yaml
     interval: 86400
 
   microsoft:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Microsoft.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/Microsoft.yaml"
     path: ./ruleset/microsoft.yaml
     interval: 86400
 
@@ -142,7 +142,7 @@ rule-providers:
   gaming:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Xbox.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/Xbox.yaml"
     path: ./ruleset/gaming.yaml
     interval: 86400
 
@@ -150,21 +150,21 @@ rule-providers:
   bilibili:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ChinaMedia.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/ChinaMedia.yaml"
     path: ./ruleset/bilibili.yaml
     interval: 86400
 
   neteasemusic:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/NetEaseMusic.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/NetEaseMusic.yaml"
     path: ./ruleset/neteasemusic.yaml
     interval: 86400
 
   chinadomain:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ChinaDomain.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/ChinaDomain.yaml"
     path: ./ruleset/chinadomain.yaml
     interval: 86400
 
@@ -172,14 +172,14 @@ rule-providers:
   telegram:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Telegram.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/Telegram.yaml"
     path: ./ruleset/telegram.yaml
     interval: 86400
 
   telegramcidr:
     type: http
     behavior: ipcidr
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Telegram.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/Telegram.yaml"
     path: ./ruleset/telegramcidr.yaml
     interval: 86400
 
@@ -187,7 +187,7 @@ rule-providers:
   gfwlist:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/ProxyGFWlist.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/ProxyGFWlist.yaml"
     path: ./ruleset/gfwlist.yaml
     interval: 86400
 
