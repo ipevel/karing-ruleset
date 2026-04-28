@@ -1,7 +1,6 @@
 # Apple - 29 rules
 payload:
   - DOMAIN-SUFFIX,aaplimg.com,Proxy
-  - DOMAIN-SUFFIX,akadns.net,Proxy
   - DOMAIN-SUFFIX,apple-cloudkit.com,Proxy
   - DOMAIN-SUFFIX,apple-dns.net,Proxy
   - DOMAIN-SUFFIX,apple-mapkit.com,Proxy
