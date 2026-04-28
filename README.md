@@ -1,31 +1,31 @@
-# Karing Ruleset
+# Clash Rulesets
 
-Clash Meta rulesets generated from [KaringX/karing-ruleset](https://github.com/KaringX/karing-ruleset).
+Clash Meta / Mihomo 分流规则集，兼容 Xboard 等面板。
 
-## Directory Structure
+## 目录结构
 
 ```
 clashmeta/
-├── providers/                        # Individual rule provider .txt files (23 categories)
-├── karing-full.clash.yaml            # Complete ruleset (111,408 rules, 4.5MB)
-├── karing-selected.clash.yaml        # Selected categories only (9,501 rules, 357KB)
-└── karing-xboard-subscription.yaml   # Xboard subscription template
+├── providers/                        # 规则 provider 文件（23个分类）
+├── clash-full.clash.yaml            # 完整规则集
+├── clash-selected.clash.yaml        # 精选规则集
+└── clash-xboard-subscription.yaml   # Xboard 订阅模板
 ```
 
-## Usage
+## 使用方式
 
-### As Xboard Template
+### Xboard 模板
 
-Import `karing-xboard-subscription.yaml` into Xboard's Clash Meta subscription template system.
+在 Xboard 的 Clash Meta 订阅模板系统中导入 `clash-xboard-subscription.yaml`。
 
-### As Rule Providers (CDN)
+### 规则 Provider（CDN）
 
-Provider files hosted via jsDelivr CDN:
+通过 jsDelivr CDN 托管的 provider 文件：
 
 ```
-https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Google.txt
+https://fastly.jsdelivr.net/gh/ipevel/clash-rulesets@main/clashmeta/providers/Google.yaml
 ```
 
-### Standalone Config
+### 独立配置文件
 
-Use `karing-full.clash.yaml` or `karing-selected.clash.yaml` as standalone Clash Meta config files (fill in your proxy nodes under `proxies:` section).
+将 `clash-full.clash.yaml` 或 `clash-selected.clash.yaml` 作为独立的 Clash Meta 配置文件使用（在 `proxies:` 节点处填入你的代理节点）。

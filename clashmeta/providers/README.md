@@ -20,7 +20,7 @@ rule-providers:
   Apple:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@main/clashmeta/providers/Apple.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/clash-ruleset@main/clashmeta/providers/Apple.yaml"
     path: ./providers/Apple.yaml
     interval: 86400
 ```
