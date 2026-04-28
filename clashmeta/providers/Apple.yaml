@@ -1,4 +1,4 @@
-# Apple - 29 rules
+# Apple - 27 rules
 payload:
   - DOMAIN-SUFFIX,aaplimg.com,Proxy
   - DOMAIN-SUFFIX,apple-cloudkit.com,Proxy
@@ -6,14 +6,12 @@ payload:
   - DOMAIN-SUFFIX,apple-mapkit.com,Proxy
   - DOMAIN-SUFFIX,apple.co,Proxy
   - DOMAIN-SUFFIX,apple.com,Proxy
-  - DOMAIN-SUFFIX,apple.com.cn,Proxy
   - DOMAIN-SUFFIX,apple.news,Proxy
   - DOMAIN-SUFFIX,appstore.com,Proxy
   - DOMAIN-SUFFIX,cdn-apple.com,Proxy
   - DOMAIN-SUFFIX,crashlytics.com,Proxy
   - DOMAIN-SUFFIX,icloud-content.com,Proxy
   - DOMAIN-SUFFIX,icloud.com,Proxy
-  - DOMAIN-SUFFIX,icloud.com.cn,Proxy
   - DOMAIN-SUFFIX,itunes.com,Proxy
   - DOMAIN-SUFFIX,me.com,Proxy
   - DOMAIN-SUFFIX,mzstatic.com,Proxy
