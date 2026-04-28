@@ -134,7 +134,7 @@ rule-providers:
   microsoft:
     type: http
     behavior: domain
-    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@65b6686/clashmeta/providers/Microsoft.yaml"
+    url: "https://fastly.jsdelivr.net/gh/ipevel/karing-ruleset@18c36d5/clashmeta/providers/Microsoft.yaml"
     path: ./ruleset/microsoft-v2.yaml
     interval: 3600
 
